@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Popup from './components/Popup'
+import Toast from './components/Toast'
 
 Vue.config.productionTip = false
 
-Vue.use(Popup)
+Vue.use(Toast)
 
 new Vue({
   render: h => h(App),

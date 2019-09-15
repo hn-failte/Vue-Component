@@ -1,4 +1,4 @@
-# popup
+# toast
 
 ## Project setup
 ```

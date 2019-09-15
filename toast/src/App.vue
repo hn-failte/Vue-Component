@@ -10,9 +10,9 @@ export default {
   name: 'app',
   methods: {
     doit() {
-      this.$popup({
+      this.$toast({
         status: true,
-        msg: "doitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoitdoit"
+        msg: 'ShitShitShit'
       })
     }
   },

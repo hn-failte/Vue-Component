@@ -1,9 +1,10 @@
 <template>
-    <div class='popup-container' v-if="status">
-        <div class="popup-content">
+    <div class='popup-container' ref="popup" v-if="status">
+        <div class="popup-content" ref="popupBody">
             <div class="popup-title">{{title}}</div>
             <div class="popup-msg">{{msg}}</div>
-            <a class="popup-btn" href="javascript: void(0)" @click="hidePopup">x</a>
+            <a class="popup-btn-close" href="javascript: void(0)" @click="hidePopup">x</a>
+            <a class="popup-btn-confirm" href="javascript: void(0)" @click="hidePopup">OK</a>
         </div>
     </div>
 </template>
@@ -27,10 +28,11 @@ export default {
             position: absolute;
             top: 50%;
             left: 50%;
-            margin: -150px -300px;
+            transform: translate(-50%, -50%);
             background: #fff;
-            width: 600px;
-            height: 300px;
+            width: 0;
+            height: 0;
+            transition: width,height .2s;
         }
         div.popup-title{
             width: 590px;
@@ -47,8 +49,9 @@ export default {
             border: 1px solid #999;
             border-top: none;
             padding: 15px 5px;
+            word-break: break-all;
         }
-        a.popup-btn{
+        a.popup-btn-close{
             position: absolute;
             top: 5px;
             right: 5px;
@@ -61,6 +64,22 @@ export default {
             text-decoration: none;
             color: #666;
             background: #f00;
+        }
+        a.popup-btn-confirm{
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            border-radius: 999px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            background: #bbb;
         }
     }
 </style>
