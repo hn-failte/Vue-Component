@@ -1,0 +1,14 @@
+{
+  "name": "v-debounce",
+  "version": "0.0.1",
+  "description": "Vue防抖指令",
+  "main": "./src/VDebounce.js",
+  "keywords": [
+    "debounce",
+    "防抖",
+    "指令",
+    "Vue"
+  ],
+  "author": "hn-failte<failte@163.com>",
+  "license": "ISC"
+}

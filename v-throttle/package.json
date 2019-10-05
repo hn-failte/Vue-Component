@@ -1,0 +1,14 @@
+{
+  "name": "v-throttle",
+  "version": "0.0.2",
+  "description": "Vue节流指令",
+  "main": "./src/VThrottle.js",
+  "keywords": [
+    "throttle",
+    "节流",
+    "指令",
+    "Vue"
+  ],
+  "author": "hn-failte<failte@163.com>",
+  "license": "ISC"
+}
