@@ -18,7 +18,8 @@ Popup.install = (Vue) => {
             },
             methods: {
                 hidePopup() {
-                    this.$refs.popup.remove();
+                    this.$destroy();
+                    this.$el.remove();
                     Vue.prototype.existPopup = false;
                 },
             },

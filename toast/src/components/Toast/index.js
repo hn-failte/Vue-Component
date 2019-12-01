@@ -20,7 +20,10 @@ Toast.install = (Vue) => {
             },
             mounted() {
                 setTimeout(() => this.$refs.toast.style.opacity = 0, this.time);
-                setTimeout(() => this.$refs.toast.remove(), this.time + 1000)
+                setTimeout(() => {
+                    this.$destroy();
+                    this.$el.remove()
+                }, this.time + 1000)
             },
         })
         document.body.appendChild(toast.$mount().$el)

@@ -23,10 +23,11 @@ Confirm.install = (Vue) => {
                     this.hide()
                 },
                 confirmCancel() {
-                    cancel()
-                    this.hide()
+                    cancel();
+                    this.hide();
                 },
                 hide() {
+                    this.$destroy();
                     this.$el.remove();
                 }
             }
@@ -35,4 +36,4 @@ Confirm.install = (Vue) => {
     }
 }
 
-export default Confirm
+export default Confirm;

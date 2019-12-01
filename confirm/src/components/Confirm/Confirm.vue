@@ -1,11 +1,11 @@
 <template>
-    <div class='confirm-board' ref="confirmBoard" @click.passive="confirmCancel">
+    <div class='confirm-board' ref="confirmBoard" @click.stop="confirmCancel">
         <div class="confirm-container" ref="confirmContainer" @click.stop="()=>{}">
             <div class="confirm-title" :style="'background: ' + bgColor">{{title}}</div>
             <div class="confirm-body">{{msg}}</div>
             <div class="confirm-btns">
-                <a class="confirm-btn-confirm" href="javascript: void(0)" @click="confirmSuccess">{{ok}}</a>
-                <a class="confirm-btn-cancel" href="javascript: void(0)" @click="confirmCancel">{{cancel}}</a>
+                <a class="confirm-btn-confirm" href="javascript: void(0)" @click.stop="confirmSuccess">{{ok}}</a>
+                <a class="confirm-btn-cancel" href="javascript: void(0)" @click.stop="confirmCancel">{{cancel}}</a>
             </div>
         </div>
     </div>
